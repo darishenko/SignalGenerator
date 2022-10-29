@@ -2,13 +2,13 @@
 
 namespace SignalGenerator.Signal.SignalType
 {
-    class HarmonicSignal
+    class HarmonicSignalWave : ISignalWave
     {
-        public double amplitude;
-        public double phase;
-        public double frequency;
+        public double amplitude { get; set; }
+        public double phase { get; set; }
+        public double frequency { get; set; }
 
-        public HarmonicSignal(double amplitude, double phase, double frequency)
+        public HarmonicSignalWave(double amplitude, double phase, double frequency)
         {
             this.amplitude = amplitude;
             this.phase = phase;
@@ -24,7 +24,6 @@ namespace SignalGenerator.Signal.SignalType
             for(int i=0; i < steps +1; i++)
             {
                 signalWaveDots[i] = amplitude * Math.Cos(i * samplingStep * frequency + phase);
-                Console.WriteLine( i+1 +"   "+i * samplingStep);
             }
 
             return signalWaveDots;
