@@ -23,7 +23,7 @@ namespace SignalGenerator.Signal.SignalType
 
             for(int i=0; i < steps +1; i++)
             {
-                signalWaveDots[i] = amplitude * Math.Cos(i * samplingStep * frequency + phase);
+                signalWaveDots[i] = amplitude * Math.Sin(2 * Math.PI * i * samplingStep * frequency + phase);
             }
 
             return signalWaveDots;
