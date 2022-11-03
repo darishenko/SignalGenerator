@@ -8,15 +8,15 @@ namespace SignalGenerator.Signal.SignalType
 {
     class SawtoothSignalWave : ISignalWave
     {
-        public double amplitude { get; set; }
-        public double phase { get; set; }
-        public double frequency { get; set; }
+        public double Amplitude { get; set; }
+        public double Phase { get; set; }
+        public double Frequency { get; set; }
 
         public SawtoothSignalWave(double amplitude, double phase, double frequency)
         {
-            this.amplitude = amplitude;
-            this.phase = phase;
-            this.frequency = frequency;
+            this.Amplitude = amplitude;
+            this.Phase = phase;
+            this.Frequency = frequency;
         }
 
         public double[] GenerateSignalWaveDots(int time, int sampling)
@@ -27,7 +27,7 @@ namespace SignalGenerator.Signal.SignalType
 
             for (int i = 0; i < steps + 1; i++)
             {
-                signalWaveDots[i] = 2 * amplitude / Math.PI * Math.Atan(Math.Tan(Math.PI * frequency * i * samplingStep + phase));
+                signalWaveDots[i] = 2 * Amplitude / Math.PI * Math.Atan(Math.Tan(Math.PI * Frequency * i * samplingStep + Phase));
             }
 
             return signalWaveDots;

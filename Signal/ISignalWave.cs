@@ -2,9 +2,9 @@
 {
     interface ISignalWave
     {
-        double amplitude { get; set; }
-        double phase { get; set; }
-        double frequency { get; set; }
+        double Amplitude { get; set; }
+        double Phase { get; set; }
+        double Frequency { get; set; }
 
         double[] GenerateSignalWaveDots(int time, int sampling);
     }

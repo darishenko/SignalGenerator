@@ -4,15 +4,15 @@ namespace SignalGenerator.Signal.SignalType
 {
     class HarmonicSignalWave : ISignalWave
     {
-        public double amplitude { get; set; }
-        public double phase { get; set; }
-        public double frequency { get; set; }
+        public double Amplitude { get; set; }
+        public double Phase { get; set; }
+        public double Frequency { get; set; }
 
         public HarmonicSignalWave(double amplitude, double phase, double frequency)
         {
-            this.amplitude = amplitude;
-            this.phase = phase;
-            this.frequency = frequency;
+            this.Amplitude = amplitude;
+            this.Phase = phase;
+            this.Frequency = frequency;
         }
 
         public double[] GenerateSignalWaveDots(int time, int sampling)
@@ -23,7 +23,7 @@ namespace SignalGenerator.Signal.SignalType
 
             for(int i=0; i < steps +1; i++)
             {
-                signalWaveDots[i] = amplitude * Math.Sin(2 * Math.PI * i * samplingStep * frequency + phase);
+                signalWaveDots[i] = Amplitude * Math.Sin(2 * Math.PI * i * samplingStep * Frequency + Phase);
             }
 
             return signalWaveDots;
