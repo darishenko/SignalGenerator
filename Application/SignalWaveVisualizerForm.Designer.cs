@@ -31,6 +31,7 @@ namespace SignalGenerator
         {
             this.components = new System.ComponentModel.Container();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.comboBoxSignalWaveTypes = new System.Windows.Forms.ComboBox();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.TextBox_Amplitude = new System.Windows.Forms.TextBox();
@@ -43,10 +44,12 @@ namespace SignalGenerator
             this.TextBox_Time = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.TextBox_Sampling = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.DutyCycle = new System.Windows.Forms.TextBox();
             this.Button_GenerateSignalWave = new System.Windows.Forms.Button();
             this.SignalWavePlot = new OxyPlot.WindowsForms.PlotView();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.comboBoxSignalWaveTypes = new System.Windows.Forms.ComboBox();
+            this.b_play = new System.Windows.Forms.Button();
             this.flowLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
             this.flowLayoutPanel3.SuspendLayout();
@@ -60,8 +63,23 @@ namespace SignalGenerator
             this.flowLayoutPanel1.Controls.Add(this.flowLayoutPanel3);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(10, 12);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(274, 543);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(274, 477);
             this.flowLayoutPanel1.TabIndex = 1;
+            // 
+            // comboBoxSignalWaveTypes
+            // 
+            this.comboBoxSignalWaveTypes.FormattingEnabled = true;
+            this.comboBoxSignalWaveTypes.Items.AddRange(new object[] {
+            "Harmonic Wave",
+            "Sawtooth Wave",
+            "Square Wave",
+            "Triangle Wave",
+            "Noise",
+            "PulseWithDifferentDutyCycle"});
+            this.comboBoxSignalWaveTypes.Location = new System.Drawing.Point(3, 3);
+            this.comboBoxSignalWaveTypes.Name = "comboBoxSignalWaveTypes";
+            this.comboBoxSignalWaveTypes.Size = new System.Drawing.Size(263, 28);
+            this.comboBoxSignalWaveTypes.TabIndex = 3;
             // 
             // flowLayoutPanel2
             // 
@@ -135,10 +153,12 @@ namespace SignalGenerator
             this.flowLayoutPanel3.Controls.Add(this.TextBox_Time);
             this.flowLayoutPanel3.Controls.Add(this.label5);
             this.flowLayoutPanel3.Controls.Add(this.TextBox_Sampling);
+            this.flowLayoutPanel3.Controls.Add(this.label6);
+            this.flowLayoutPanel3.Controls.Add(this.DutyCycle);
             this.flowLayoutPanel3.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.flowLayoutPanel3.Location = new System.Drawing.Point(3, 248);
             this.flowLayoutPanel3.Name = "flowLayoutPanel3";
-            this.flowLayoutPanel3.Size = new System.Drawing.Size(146, 135);
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(142, 210);
             this.flowLayoutPanel3.TabIndex = 2;
             // 
             // label4
@@ -175,6 +195,22 @@ namespace SignalGenerator
             this.TextBox_Sampling.TabIndex = 3;
             this.TextBox_Sampling.TextChanged += new System.EventHandler(this.TextBox_TextChanged);
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(3, 118);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(99, 23);
+            this.label6.TabIndex = 5;
+            this.label6.Text = "DutyCycle";
+            // 
+            // DutyCycle
+            // 
+            this.DutyCycle.Location = new System.Drawing.Point(3, 144);
+            this.DutyCycle.Name = "DutyCycle";
+            this.DutyCycle.Size = new System.Drawing.Size(100, 30);
+            this.DutyCycle.TabIndex = 4;
+            // 
             // Button_GenerateSignalWave
             // 
             this.Button_GenerateSignalWave.BackColor = System.Drawing.Color.LightSlateGray;
@@ -182,7 +218,7 @@ namespace SignalGenerator
             this.Button_GenerateSignalWave.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Button_GenerateSignalWave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Button_GenerateSignalWave.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Button_GenerateSignalWave.Location = new System.Drawing.Point(12, 580);
+            this.Button_GenerateSignalWave.Location = new System.Drawing.Point(10, 505);
             this.Button_GenerateSignalWave.Name = "Button_GenerateSignalWave";
             this.Button_GenerateSignalWave.Size = new System.Drawing.Size(272, 55);
             this.Button_GenerateSignalWave.TabIndex = 2;
@@ -208,24 +244,27 @@ namespace SignalGenerator
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
-            // comboBoxSignalWaveTypes
+            // b_play
             // 
-            this.comboBoxSignalWaveTypes.FormattingEnabled = true;
-            this.comboBoxSignalWaveTypes.Items.AddRange(new object[] {
-            "Harmonic Wave",
-            "Sawtooth Wave",
-            "Square Wave",
-            "Triangle Wave"});
-            this.comboBoxSignalWaveTypes.Location = new System.Drawing.Point(3, 3);
-            this.comboBoxSignalWaveTypes.Name = "comboBoxSignalWaveTypes";
-            this.comboBoxSignalWaveTypes.Size = new System.Drawing.Size(263, 28);
-            this.comboBoxSignalWaveTypes.TabIndex = 3;
+            this.b_play.BackColor = System.Drawing.Color.LightSlateGray;
+            this.b_play.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.b_play.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.b_play.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.b_play.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.b_play.Location = new System.Drawing.Point(10, 581);
+            this.b_play.Name = "b_play";
+            this.b_play.Size = new System.Drawing.Size(272, 55);
+            this.b_play.TabIndex = 3;
+            this.b_play.Text = "Play";
+            this.b_play.UseVisualStyleBackColor = false;
+            this.b_play.Click += new System.EventHandler(this.b_play_Click);
             // 
             // SignalWaveVisualizerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1238, 648);
+            this.Controls.Add(this.b_play);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.Button_GenerateSignalWave);
             this.Controls.Add(this.SignalWavePlot);
@@ -259,6 +298,9 @@ namespace SignalGenerator
         private OxyPlot.WindowsForms.PlotView SignalWavePlot;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ComboBox comboBoxSignalWaveTypes;
+        private System.Windows.Forms.TextBox DutyCycle;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button b_play;
     }
 }
 

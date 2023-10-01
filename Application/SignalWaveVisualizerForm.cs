@@ -4,9 +4,11 @@ using OxyPlot.Series;
 using SignalGenerator.Signal;
 using SignalGenerator.Signal.SignalType;
 using SignalGenerator.Signal.SignalWave;
+using SignalGenerator.Signal.Sound;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Media;
 using System.Windows.Forms;
 
 namespace SignalGenerator
@@ -14,6 +16,10 @@ namespace SignalGenerator
     public partial class SignalWaveVisualizerForm : Form
     {
         private static PlotModel SignalWavePlotModel;
+        private ISignalWave selectedSignalWave;
+        private SoundPlayer player;
+        private SoundGenerator generator = new SoundGenerator();
+        private double[] signalWavePoints;
 
         public SignalWaveVisualizerForm()
         {
@@ -43,19 +49,24 @@ namespace SignalGenerator
             int Time = int.Parse(TextBox_Time.Text);
             int Sampling = int.Parse(TextBox_Sampling.Text);
 
-            ISignalWave selectedSignalWave = getSignalWave();
-            double[] signalWavePoints = selectedSignalWave.GenerateSignalWaveDots(Time, Sampling);
+            selectedSignalWave = getSignalWave();
+            signalWavePoints = selectedSignalWave.GenerateSignalWaveDots(Time, Sampling);
             DrawSignalWave(signalWavePoints, Time, Sampling);
         }
 
         private ISignalWave getSignalWave()
         {
-            double Amplitude = Double.Parse(TextBox_Amplitude.Text);
-            double Phase = Double.Parse(TextBox_Phase.Text);
-            double Frequency = Double.Parse(TextBox_Frequency.Text);
+            double Amplitude = 1;
+            double Phase = 0;
+            double Frequency = 1;
+            var signalWaveType = (SignalWaveType)comboBoxSignalWaveTypes.SelectedIndex;
+            if (signalWaveType != SignalWaveType.NOISE) {
+                Amplitude = Double.Parse(TextBox_Amplitude.Text);
+                Phase = Double.Parse(TextBox_Phase.Text);
+                Frequency = Double.Parse(TextBox_Frequency.Text);
+            }
 
             ISignalWave selectedSignalWave;
-            var signalWaveType = (SignalWaveType)comboBoxSignalWaveTypes.SelectedIndex;
             switch (signalWaveType)
             {
                 case SignalWaveType.HARMONIC:
@@ -69,6 +80,13 @@ namespace SignalGenerator
                     break;
                 case SignalWaveType.SAWTOOTH:
                     selectedSignalWave = new SawtoothSignalWave(Amplitude, Phase, Frequency);
+                    break;
+                case SignalWaveType.NOISE:
+                    selectedSignalWave = new Noise(Amplitude);
+                    break;
+                case SignalWaveType.PulseWithDifferentDutyCycle:
+                    float dutyCycle = float.Parse(DutyCycle.Text);
+                    selectedSignalWave = new PulseWithDifferentDutyCycle(Amplitude, dutyCycle, Frequency);
                     break;
                 default:
                     selectedSignalWave = new HarmonicSignalWave(Amplitude, Phase, Frequency);
@@ -98,6 +116,13 @@ namespace SignalGenerator
             SignalWavePlot.Model = SignalWavePlotModel;
             SignalWavePlot.InvalidatePlot(true);
         }
-        
+
+        private void b_play_Click(object sender, EventArgs e)
+        {
+            string filename = "result.wave";
+            generator.WriteWaveFile(filename, signalWavePoints, signalWavePoints.Length);
+            player = new SoundPlayer(filename);
+            player.Play();
+        }
     }
 }

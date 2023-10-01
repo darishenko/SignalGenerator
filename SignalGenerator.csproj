@@ -83,9 +83,13 @@
     <Compile Include="Signal\ISignalWave.cs" />
     <Compile Include="Signal\SignalWaveType.cs" />
     <Compile Include="Signal\SignalWave\HarmonicSignalWave.cs" />
+    <Compile Include="Signal\SignalWave\Noise.cs" />
+    <Compile Include="Signal\SignalWave\PulseWithDifferentDutyCycle.cs" />
     <Compile Include="Signal\SignalWave\SawtoothSignalWave.cs" />
     <Compile Include="Signal\SignalWave\SquareSignalWave.cs" />
     <Compile Include="Signal\SignalWave\TriangleSignalWave.cs" />
+    <Compile Include="Signal\Sound\SoundFormat.cs" />
+    <Compile Include="Signal\Sound\SoundGenerator.cs" />
     <EmbeddedResource Include="Application\SignalWaveVisualizerForm.resx">
       <DependentUpon>SignalWaveVisualizerForm.cs</DependentUpon>
     </EmbeddedResource>

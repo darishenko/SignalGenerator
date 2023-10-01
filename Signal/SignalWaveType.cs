@@ -11,7 +11,9 @@ namespace SignalGenerator.Signal.SignalWave
         HARMONIC,
         SAWTOOTH,
         SQUARE,
-        TRIANGLE,      
-        
+        TRIANGLE, 
+        NOISE,
+        PulseWithDifferentDutyCycle,
+
     }
 }
