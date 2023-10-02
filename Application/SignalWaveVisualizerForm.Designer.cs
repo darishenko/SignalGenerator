@@ -363,7 +363,7 @@ namespace SignalGenerator
             this.button2.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button2.Location = new System.Drawing.Point(39, 78);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(142, 36);
+            this.button2.Size = new System.Drawing.Size(142, 47);
             this.button2.TabIndex = 4;
             this.button2.Text = "Play";
             this.button2.UseVisualStyleBackColor = false;
@@ -387,8 +387,8 @@ namespace SignalGenerator
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 38.50932F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 61.49068F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 28.92019F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 71.07981F));
             this.tableLayoutPanel1.Controls.Add(this.comboBox1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.comboBox2, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.comboBox3, 0, 2);
@@ -402,13 +402,13 @@ namespace SignalGenerator
             this.tableLayoutPanel1.Location = new System.Drawing.Point(237, 3);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 5;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40.14085F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 59.85915F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 136F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 146F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 96F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 49.77169F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.22831F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 111F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 111F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 221F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(966, 663);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1065, 636);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // comboBox1
@@ -436,7 +436,7 @@ namespace SignalGenerator
             "Triangle Wave",
             "Noise",
             "PulseWithDifferentDutyCycle"});
-            this.comboBox2.Location = new System.Drawing.Point(3, 117);
+            this.comboBox2.Location = new System.Drawing.Point(3, 99);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(263, 28);
             this.comboBox2.TabIndex = 5;
@@ -451,7 +451,7 @@ namespace SignalGenerator
             "Triangle Wave",
             "Noise",
             "PulseWithDifferentDutyCycle"});
-            this.comboBox3.Location = new System.Drawing.Point(3, 287);
+            this.comboBox3.Location = new System.Drawing.Point(3, 195);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(263, 28);
             this.comboBox3.TabIndex = 6;
@@ -466,7 +466,7 @@ namespace SignalGenerator
             "Triangle Wave",
             "Noise",
             "PulseWithDifferentDutyCycle"});
-            this.comboBox4.Location = new System.Drawing.Point(3, 423);
+            this.comboBox4.Location = new System.Drawing.Point(3, 306);
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(263, 28);
             this.comboBox4.TabIndex = 7;
@@ -481,7 +481,7 @@ namespace SignalGenerator
             "Triangle Wave",
             "Noise",
             "PulseWithDifferentDutyCycle"});
-            this.comboBox5.Location = new System.Drawing.Point(3, 569);
+            this.comboBox5.Location = new System.Drawing.Point(3, 417);
             this.comboBox5.Name = "comboBox5";
             this.comboBox5.Size = new System.Drawing.Size(263, 28);
             this.comboBox5.TabIndex = 8;
@@ -499,9 +499,9 @@ namespace SignalGenerator
             this.flowLayoutPanel1.Controls.Add(this.label27);
             this.flowLayoutPanel1.Controls.Add(this.t1);
             this.flowLayoutPanel1.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(375, 3);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(310, 3);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(462, 108);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(631, 90);
             this.flowLayoutPanel1.TabIndex = 9;
             // 
             // label7
@@ -540,7 +540,7 @@ namespace SignalGenerator
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(3, 36);
+            this.label9.Location = new System.Drawing.Point(383, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(98, 23);
             this.label9.TabIndex = 4;
@@ -548,7 +548,7 @@ namespace SignalGenerator
             // 
             // fr1
             // 
-            this.fr1.Location = new System.Drawing.Point(107, 39);
+            this.fr1.Location = new System.Drawing.Point(487, 3);
             this.fr1.Name = "fr1";
             this.fr1.Size = new System.Drawing.Size(100, 30);
             this.fr1.TabIndex = 7;
@@ -556,7 +556,7 @@ namespace SignalGenerator
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(213, 36);
+            this.label22.Location = new System.Drawing.Point(3, 36);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(99, 23);
             this.label22.TabIndex = 8;
@@ -564,7 +564,7 @@ namespace SignalGenerator
             // 
             // dc1
             // 
-            this.dc1.Location = new System.Drawing.Point(318, 39);
+            this.dc1.Location = new System.Drawing.Point(108, 39);
             this.dc1.Name = "dc1";
             this.dc1.Size = new System.Drawing.Size(100, 30);
             this.dc1.TabIndex = 9;
@@ -572,7 +572,7 @@ namespace SignalGenerator
             // label27
             // 
             this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(3, 72);
+            this.label27.Location = new System.Drawing.Point(214, 36);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(53, 23);
             this.label27.TabIndex = 10;
@@ -580,7 +580,7 @@ namespace SignalGenerator
             // 
             // t1
             // 
-            this.t1.Location = new System.Drawing.Point(62, 75);
+            this.t1.Location = new System.Drawing.Point(273, 39);
             this.t1.Name = "t1";
             this.t1.Size = new System.Drawing.Size(100, 30);
             this.t1.TabIndex = 11;
@@ -598,9 +598,9 @@ namespace SignalGenerator
             this.flowLayoutPanel4.Controls.Add(this.label28);
             this.flowLayoutPanel4.Controls.Add(this.t2);
             this.flowLayoutPanel4.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.flowLayoutPanel4.Location = new System.Drawing.Point(375, 117);
+            this.flowLayoutPanel4.Location = new System.Drawing.Point(310, 99);
             this.flowLayoutPanel4.Name = "flowLayoutPanel4";
-            this.flowLayoutPanel4.Size = new System.Drawing.Size(452, 136);
+            this.flowLayoutPanel4.Size = new System.Drawing.Size(631, 90);
             this.flowLayoutPanel4.TabIndex = 10;
             // 
             // label10
@@ -639,7 +639,7 @@ namespace SignalGenerator
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(3, 36);
+            this.label12.Location = new System.Drawing.Point(383, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(98, 23);
             this.label12.TabIndex = 4;
@@ -647,7 +647,7 @@ namespace SignalGenerator
             // 
             // fr2
             // 
-            this.fr2.Location = new System.Drawing.Point(107, 39);
+            this.fr2.Location = new System.Drawing.Point(487, 3);
             this.fr2.Name = "fr2";
             this.fr2.Size = new System.Drawing.Size(100, 30);
             this.fr2.TabIndex = 7;
@@ -655,7 +655,7 @@ namespace SignalGenerator
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(213, 36);
+            this.label23.Location = new System.Drawing.Point(3, 36);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(99, 23);
             this.label23.TabIndex = 10;
@@ -663,7 +663,7 @@ namespace SignalGenerator
             // 
             // dc2
             // 
-            this.dc2.Location = new System.Drawing.Point(318, 39);
+            this.dc2.Location = new System.Drawing.Point(108, 39);
             this.dc2.Name = "dc2";
             this.dc2.Size = new System.Drawing.Size(100, 30);
             this.dc2.TabIndex = 11;
@@ -671,7 +671,7 @@ namespace SignalGenerator
             // label28
             // 
             this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(3, 72);
+            this.label28.Location = new System.Drawing.Point(214, 36);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(53, 23);
             this.label28.TabIndex = 12;
@@ -679,7 +679,7 @@ namespace SignalGenerator
             // 
             // t2
             // 
-            this.t2.Location = new System.Drawing.Point(62, 75);
+            this.t2.Location = new System.Drawing.Point(273, 39);
             this.t2.Name = "t2";
             this.t2.Size = new System.Drawing.Size(100, 30);
             this.t2.TabIndex = 13;
@@ -697,9 +697,9 @@ namespace SignalGenerator
             this.flowLayoutPanel5.Controls.Add(this.label31);
             this.flowLayoutPanel5.Controls.Add(this.t5);
             this.flowLayoutPanel5.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.flowLayoutPanel5.Location = new System.Drawing.Point(375, 569);
+            this.flowLayoutPanel5.Location = new System.Drawing.Point(310, 417);
             this.flowLayoutPanel5.Name = "flowLayoutPanel5";
-            this.flowLayoutPanel5.Size = new System.Drawing.Size(452, 91);
+            this.flowLayoutPanel5.Size = new System.Drawing.Size(631, 109);
             this.flowLayoutPanel5.TabIndex = 11;
             // 
             // label13
@@ -738,7 +738,7 @@ namespace SignalGenerator
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(3, 36);
+            this.label15.Location = new System.Drawing.Point(383, 0);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(98, 23);
             this.label15.TabIndex = 4;
@@ -746,7 +746,7 @@ namespace SignalGenerator
             // 
             // fr5
             // 
-            this.fr5.Location = new System.Drawing.Point(107, 39);
+            this.fr5.Location = new System.Drawing.Point(487, 3);
             this.fr5.Name = "fr5";
             this.fr5.Size = new System.Drawing.Size(100, 30);
             this.fr5.TabIndex = 7;
@@ -754,7 +754,7 @@ namespace SignalGenerator
             // label26
             // 
             this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(213, 36);
+            this.label26.Location = new System.Drawing.Point(3, 36);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(99, 23);
             this.label26.TabIndex = 10;
@@ -762,7 +762,7 @@ namespace SignalGenerator
             // 
             // dc5
             // 
-            this.dc5.Location = new System.Drawing.Point(318, 39);
+            this.dc5.Location = new System.Drawing.Point(108, 39);
             this.dc5.Name = "dc5";
             this.dc5.Size = new System.Drawing.Size(100, 30);
             this.dc5.TabIndex = 11;
@@ -770,7 +770,7 @@ namespace SignalGenerator
             // label31
             // 
             this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(3, 72);
+            this.label31.Location = new System.Drawing.Point(214, 36);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(53, 23);
             this.label31.TabIndex = 12;
@@ -778,7 +778,7 @@ namespace SignalGenerator
             // 
             // t5
             // 
-            this.t5.Location = new System.Drawing.Point(62, 75);
+            this.t5.Location = new System.Drawing.Point(273, 39);
             this.t5.Name = "t5";
             this.t5.Size = new System.Drawing.Size(100, 30);
             this.t5.TabIndex = 13;
@@ -796,9 +796,9 @@ namespace SignalGenerator
             this.flowLayoutPanel6.Controls.Add(this.label30);
             this.flowLayoutPanel6.Controls.Add(this.t3);
             this.flowLayoutPanel6.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.flowLayoutPanel6.Location = new System.Drawing.Point(375, 287);
+            this.flowLayoutPanel6.Location = new System.Drawing.Point(310, 195);
             this.flowLayoutPanel6.Name = "flowLayoutPanel6";
-            this.flowLayoutPanel6.Size = new System.Drawing.Size(452, 130);
+            this.flowLayoutPanel6.Size = new System.Drawing.Size(631, 98);
             this.flowLayoutPanel6.TabIndex = 12;
             // 
             // label16
@@ -837,7 +837,7 @@ namespace SignalGenerator
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(3, 36);
+            this.label18.Location = new System.Drawing.Point(383, 0);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(98, 23);
             this.label18.TabIndex = 4;
@@ -845,7 +845,7 @@ namespace SignalGenerator
             // 
             // fr3
             // 
-            this.fr3.Location = new System.Drawing.Point(107, 39);
+            this.fr3.Location = new System.Drawing.Point(487, 3);
             this.fr3.Name = "fr3";
             this.fr3.Size = new System.Drawing.Size(100, 30);
             this.fr3.TabIndex = 7;
@@ -853,7 +853,7 @@ namespace SignalGenerator
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(213, 36);
+            this.label24.Location = new System.Drawing.Point(3, 36);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(99, 23);
             this.label24.TabIndex = 10;
@@ -861,7 +861,7 @@ namespace SignalGenerator
             // 
             // dc3
             // 
-            this.dc3.Location = new System.Drawing.Point(318, 39);
+            this.dc3.Location = new System.Drawing.Point(108, 39);
             this.dc3.Name = "dc3";
             this.dc3.Size = new System.Drawing.Size(100, 30);
             this.dc3.TabIndex = 11;
@@ -869,7 +869,7 @@ namespace SignalGenerator
             // label30
             // 
             this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(3, 72);
+            this.label30.Location = new System.Drawing.Point(214, 36);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(53, 23);
             this.label30.TabIndex = 12;
@@ -877,7 +877,7 @@ namespace SignalGenerator
             // 
             // t3
             // 
-            this.t3.Location = new System.Drawing.Point(62, 75);
+            this.t3.Location = new System.Drawing.Point(273, 39);
             this.t3.Name = "t3";
             this.t3.Size = new System.Drawing.Size(100, 30);
             this.t3.TabIndex = 13;
@@ -895,9 +895,9 @@ namespace SignalGenerator
             this.flowLayoutPanel7.Controls.Add(this.label29);
             this.flowLayoutPanel7.Controls.Add(this.t4);
             this.flowLayoutPanel7.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.flowLayoutPanel7.Location = new System.Drawing.Point(375, 423);
+            this.flowLayoutPanel7.Location = new System.Drawing.Point(310, 306);
             this.flowLayoutPanel7.Name = "flowLayoutPanel7";
-            this.flowLayoutPanel7.Size = new System.Drawing.Size(452, 136);
+            this.flowLayoutPanel7.Size = new System.Drawing.Size(631, 93);
             this.flowLayoutPanel7.TabIndex = 13;
             // 
             // label19
@@ -936,7 +936,7 @@ namespace SignalGenerator
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(3, 36);
+            this.label21.Location = new System.Drawing.Point(383, 0);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(98, 23);
             this.label21.TabIndex = 4;
@@ -944,7 +944,7 @@ namespace SignalGenerator
             // 
             // fr4
             // 
-            this.fr4.Location = new System.Drawing.Point(107, 39);
+            this.fr4.Location = new System.Drawing.Point(487, 3);
             this.fr4.Name = "fr4";
             this.fr4.Size = new System.Drawing.Size(100, 30);
             this.fr4.TabIndex = 7;
@@ -952,7 +952,7 @@ namespace SignalGenerator
             // label25
             // 
             this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(213, 36);
+            this.label25.Location = new System.Drawing.Point(3, 36);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(99, 23);
             this.label25.TabIndex = 10;
@@ -960,7 +960,7 @@ namespace SignalGenerator
             // 
             // dc4
             // 
-            this.dc4.Location = new System.Drawing.Point(318, 39);
+            this.dc4.Location = new System.Drawing.Point(108, 39);
             this.dc4.Name = "dc4";
             this.dc4.Size = new System.Drawing.Size(100, 30);
             this.dc4.TabIndex = 11;
@@ -968,7 +968,7 @@ namespace SignalGenerator
             // label29
             // 
             this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(3, 72);
+            this.label29.Location = new System.Drawing.Point(214, 36);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(53, 23);
             this.label29.TabIndex = 12;
@@ -976,7 +976,7 @@ namespace SignalGenerator
             // 
             // t4
             // 
-            this.t4.Location = new System.Drawing.Point(62, 75);
+            this.t4.Location = new System.Drawing.Point(273, 39);
             this.t4.Name = "t4";
             this.t4.Size = new System.Drawing.Size(100, 30);
             this.t4.TabIndex = 13;

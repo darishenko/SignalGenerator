@@ -27,10 +27,11 @@ namespace SignalGenerator.Signal.SignalWave
             double samplingStep = (double)time / steps;
             double[] signalWaveDots = new double[steps + 1];
 
-            float t_imp = (float)((1 / Frequency) / DutyCycle * Frequency);
+            double T = 1 / Frequency;
             for (int i = 0; i < steps + 1; i++)
             {
-                if (t_imp > (i % sampling )* samplingStep)
+                double d = (((double)i / sampling) % T) / T;
+                if ( d < 1 / DutyCycle)
                 {
                     signalWaveDots[i] = Amplitude;
                 }
