@@ -7,6 +7,7 @@ namespace SignalGenerator.Signal.SignalType
         public double Amplitude { get; set; }
         public double Phase { get; set; }
         public double Frequency { get; set; }
+        public double[] values { get; set; }
 
         public SquareSignalWave(double amplitude, double phase, double frequency)
         {
@@ -26,6 +27,7 @@ namespace SignalGenerator.Signal.SignalType
                 signalWaveDots[i] = Amplitude * Math.Sign(Math.Sin(2 * Math.PI * i * samplingStep * Frequency + Phase));
             }
 
+            values = signalWaveDots;
             return signalWaveDots;
         }
     }

@@ -6,6 +6,8 @@
         double Phase { get; set; }
         double Frequency { get; set; }
 
+        double[] values { get; set; }
+
         double[] GenerateSignalWaveDots(int time, int sampling);
     }
 }

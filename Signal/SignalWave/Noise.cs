@@ -16,6 +16,7 @@ namespace SignalGenerator.Signal.SignalWave
             this.Amplitude = amplitude;
         }
 
+        public double[] values { get; set; }
         public double Amplitude { get; set; }
         public double Phase { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
         public double Frequency { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
@@ -32,6 +33,7 @@ namespace SignalGenerator.Signal.SignalWave
                 signalWaveDots[i] = Amplitude * (2 * random.NextDouble() - 1);
             }
 
+            values = signalWaveDots;
             return signalWaveDots;
         }
     }

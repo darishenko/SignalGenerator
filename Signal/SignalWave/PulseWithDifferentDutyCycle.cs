@@ -12,6 +12,7 @@ namespace SignalGenerator.Signal.SignalWave
         public double DutyCycle { get; set; }
         public double Phase { get; set; }
         public double Frequency { get; set; }
+        public double[] values { get; set; }
 
         public PulseWithDifferentDutyCycle(double amplitude, double dutyCycle, double frequency)
         {
@@ -38,6 +39,8 @@ namespace SignalGenerator.Signal.SignalWave
                     signalWaveDots[i] = -Amplitude;
                 }
             }
+
+            values = signalWaveDots;
             return signalWaveDots;
         }
     }

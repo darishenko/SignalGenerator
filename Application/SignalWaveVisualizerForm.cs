@@ -8,6 +8,7 @@ using SignalGenerator.Signal.Sound;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Linq;
 using System.Media;
 using System.Windows.Forms;
 
@@ -19,7 +20,8 @@ namespace SignalGenerator
         private ISignalWave selectedSignalWave;
         private SoundPlayer player;
         private SoundGenerator generator = new SoundGenerator();
-        private double[] signalWavePoints;
+        private int Sampling;
+        double[] signalWavePoints;
 
         public SignalWaveVisualizerForm()
         {
@@ -47,11 +49,11 @@ namespace SignalGenerator
         private void GenerateSignalWave(object sender, EventArgs e)
         {
             int Time = int.Parse(TextBox_Time.Text);
-            int Sampling = int.Parse(TextBox_Sampling.Text);
+            Sampling = int.Parse(TextBox_Sampling.Text);
 
             selectedSignalWave = getSignalWave();
-            signalWavePoints = selectedSignalWave.GenerateSignalWaveDots(Time, Sampling);
-            DrawSignalWave(signalWavePoints, Time, Sampling);
+            selectedSignalWave.GenerateSignalWaveDots(Time, Sampling);
+            DrawSignalWave(selectedSignalWave.values);
         }
 
         private ISignalWave getSignalWave()
@@ -96,7 +98,7 @@ namespace SignalGenerator
             return selectedSignalWave;
         }
 
-        private void DrawSignalWave(double[] signalWavePoints, int Time , int Sampling)
+        private void DrawSignalWave(double[] signalWavePoints)
         {
             LineSeries SignalWave = new LineSeries()
             {
@@ -120,7 +122,150 @@ namespace SignalGenerator
         private void b_play_Click(object sender, EventArgs e)
         {
             string filename = "result.wave";
-            generator.WriteWaveFile(filename, signalWavePoints, signalWavePoints.Length);
+            generator.WriteWaveFile(filename, selectedSignalWave.values, Sampling);
+            player = new SoundPlayer(filename);
+            player.Play();
+        }
+
+        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBoxSignalWaveTypes_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            List<ISignalWave> waves = new List<ISignalWave>();
+            ISignalWave tempWave;
+            for (int i = 1; i< 6; i++)
+            {
+                switch(i)
+                {
+                    case 1:
+                        tempWave = getSignalWaveForPolyphonicSignal(comboBox1, a1, ph1, fr1, dc1, t1);
+                        if (tempWave != null)
+                        {
+                            waves.Add(tempWave);
+                        }
+                        break;
+                    case 2:
+                        tempWave = getSignalWaveForPolyphonicSignal(comboBox2, a2, ph2, fr2, dc2, t2);
+                        if (tempWave != null)
+                        {
+                            waves.Add(tempWave);
+                        }
+                        break;
+                    case 3:
+                        tempWave = getSignalWaveForPolyphonicSignal(comboBox3, a3, ph3, fr3, dc3, t3);
+                        if (tempWave != null)
+                        {
+                            waves.Add(tempWave);
+                        }
+                        break;
+                    case 4:
+                        tempWave = getSignalWaveForPolyphonicSignal(comboBox4, a4, ph4, fr4, dc4, t4);
+                        if (tempWave != null)
+                        {
+                            waves.Add(tempWave);
+                        }
+                        break;
+                    case 5:
+                        tempWave = getSignalWaveForPolyphonicSignal(comboBox5, a5, ph5, fr5, dc5, t5);
+                        if (tempWave != null)
+                        {
+                            waves.Add(tempWave);
+                        }
+                        break;
+                }                
+            }
+            signalWavePoints = generatePolyphonicSignal(waves);
+            DrawSignalWave(signalWavePoints);
+
+        }
+
+        private double[] generatePolyphonicSignal(List<ISignalWave> waves)
+        {
+            int maxSize = 0;
+            var wavesStream = waves.AsEnumerable();
+            foreach (var wave in wavesStream)
+            {
+                maxSize = wave.values.Length > maxSize ? wave.values.Length : maxSize;
+            }                
+            double[] result = new double[maxSize];
+            foreach (var wave in wavesStream)
+            {
+                for (int i = 0; i < wave.values.Length; i++)
+                {
+                    result[i] = result[i] + wave.values[i];
+                }
+            }            
+
+            return result;
+        }
+
+        private ISignalWave getSignalWaveForPolyphonicSignal(
+            ComboBox comboBox,
+            TextBox textBox_Amplitude,
+            TextBox textBox_Phase,
+            TextBox textBox_Frequency,
+            TextBox textBox_DutyCycle,
+            TextBox textBox_Time
+            )
+        {
+            if (comboBox.SelectedIndex == -1)
+            {
+                return null;
+            }
+
+            double Amplitude = 1, Phase = 0, Frequency = 1;
+            var signalWaveType = (SignalWaveType)comboBox.SelectedIndex;
+            if (signalWaveType != SignalWaveType.NOISE)
+            {
+                Phase = Double.Parse(textBox_Phase.Text);
+                Frequency = Double.Parse(textBox_Frequency.Text);
+            }
+            Amplitude = Double.Parse(textBox_Amplitude.Text);
+
+            ISignalWave SignalWave;
+            switch (signalWaveType)
+            {
+                case SignalWaveType.HARMONIC:
+                    SignalWave = new HarmonicSignalWave(Amplitude, Phase, Frequency);
+                    break;
+                case SignalWaveType.SQUARE:
+                    SignalWave = new SquareSignalWave(Amplitude, Phase, Frequency);
+                    break;
+                case SignalWaveType.TRIANGLE:
+                    SignalWave = new TriangleSignalWave(Amplitude, Phase, Frequency);
+                    break;
+                case SignalWaveType.SAWTOOTH:
+                    SignalWave = new SawtoothSignalWave(Amplitude, Phase, Frequency);
+                    break;
+                case SignalWaveType.NOISE:
+                    SignalWave = new Noise(Amplitude);
+                    break;
+                case SignalWaveType.PulseWithDifferentDutyCycle:
+                    float dutyCycle = float.Parse(textBox_DutyCycle.Text);
+                    SignalWave = new PulseWithDifferentDutyCycle(Amplitude, dutyCycle, Frequency);
+                    break;
+                default:
+                    SignalWave = new HarmonicSignalWave(Amplitude, Phase, Frequency);
+                    break;
+            }
+            int Time = int.Parse(textBox_Time.Text);
+            SignalWave.GenerateSignalWaveDots(Time, 44100);
+
+            return SignalWave;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            string filename = "result.wave";
+            generator.WriteWaveFile(filename, signalWavePoints, 44100);
             player = new SoundPlayer(filename);
             player.Play();
         }

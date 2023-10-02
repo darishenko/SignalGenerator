@@ -11,6 +11,7 @@ namespace SignalGenerator.Signal.SignalType
         public double Amplitude { get; set; }
         public double Phase { get; set; }
         public double Frequency { get; set; }
+        public double[] values { get; set; }
 
         public SawtoothSignalWave(double amplitude, double phase, double frequency)
         {
@@ -30,6 +31,7 @@ namespace SignalGenerator.Signal.SignalType
                 signalWaveDots[i] = 2 * Amplitude / Math.PI * Math.Atan(Math.Tan(Math.PI * Frequency * i * samplingStep + Phase));
             }
 
+            values = signalWaveDots;
             return signalWaveDots;
         }
     }
