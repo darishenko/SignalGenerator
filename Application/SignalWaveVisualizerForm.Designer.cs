@@ -113,6 +113,38 @@ namespace SignalGenerator
             this.dc4 = new System.Windows.Forms.TextBox();
             this.label29 = new System.Windows.Forms.Label();
             this.t4 = new System.Windows.Forms.TextBox();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.flowLayoutPanel10 = new System.Windows.Forms.FlowLayoutPanel();
+            this.label38 = new System.Windows.Forms.Label();
+            this.ms_type = new System.Windows.Forms.ComboBox();
+            this.label40 = new System.Windows.Forms.Label();
+            this.ms_a = new System.Windows.Forms.TextBox();
+            this.label41 = new System.Windows.Forms.Label();
+            this.ms_ph = new System.Windows.Forms.TextBox();
+            this.label42 = new System.Windows.Forms.Label();
+            this.ms_fr = new System.Windows.Forms.TextBox();
+            this.label43 = new System.Windows.Forms.Label();
+            this.ms_dc = new System.Windows.Forms.TextBox();
+            this.flowLayoutPanel9 = new System.Windows.Forms.FlowLayoutPanel();
+            this.label44 = new System.Windows.Forms.Label();
+            this.ComboBox_modulationType = new System.Windows.Forms.ComboBox();
+            this.label37 = new System.Windows.Forms.Label();
+            this.textBox_modulationTime = new System.Windows.Forms.TextBox();
+            this.label39 = new System.Windows.Forms.Label();
+            this.textBox_modulationSampling = new System.Windows.Forms.TextBox();
+            this.flowLayoutPanel8 = new System.Windows.Forms.FlowLayoutPanel();
+            this.label32 = new System.Windows.Forms.Label();
+            this.cs_type = new System.Windows.Forms.ComboBox();
+            this.label33 = new System.Windows.Forms.Label();
+            this.cs_a = new System.Windows.Forms.TextBox();
+            this.label34 = new System.Windows.Forms.Label();
+            this.cs_ph = new System.Windows.Forms.TextBox();
+            this.label35 = new System.Windows.Forms.Label();
+            this.cs_fr = new System.Windows.Forms.TextBox();
+            this.label36 = new System.Windows.Forms.Label();
+            this.cs_dc = new System.Windows.Forms.TextBox();
             this.flowLayoutPanel2.SuspendLayout();
             this.flowLayoutPanel3.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -124,6 +156,10 @@ namespace SignalGenerator
             this.flowLayoutPanel5.SuspendLayout();
             this.flowLayoutPanel6.SuspendLayout();
             this.flowLayoutPanel7.SuspendLayout();
+            this.tabPage3.SuspendLayout();
+            this.flowLayoutPanel10.SuspendLayout();
+            this.flowLayoutPanel9.SuspendLayout();
+            this.flowLayoutPanel8.SuspendLayout();
             this.SuspendLayout();
             // 
             // comboBoxSignalWaveTypes
@@ -135,7 +171,7 @@ namespace SignalGenerator
             "Square Wave",
             "Triangle Wave",
             "Noise",
-            "PulseWithDifferentDutyCycle"});
+            "PULSEWITHDIFFERENTDUTYCYCLE"});
             this.comboBoxSignalWaveTypes.Location = new System.Drawing.Point(0, 7);
             this.comboBoxSignalWaveTypes.Name = "comboBoxSignalWaveTypes";
             this.comboBoxSignalWaveTypes.Size = new System.Drawing.Size(263, 28);
@@ -318,6 +354,7 @@ namespace SignalGenerator
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Location = new System.Drawing.Point(2, 3);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -420,7 +457,7 @@ namespace SignalGenerator
             "Square Wave",
             "Triangle Wave",
             "Noise",
-            "PulseWithDifferentDutyCycle"});
+            "PULSEWITHDIFFERENTDUTYCYCLE"});
             this.comboBox1.Location = new System.Drawing.Point(3, 3);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(263, 28);
@@ -435,7 +472,7 @@ namespace SignalGenerator
             "Square Wave",
             "Triangle Wave",
             "Noise",
-            "PulseWithDifferentDutyCycle"});
+            "PULSEWITHDIFFERENTDUTYCYCLE"});
             this.comboBox2.Location = new System.Drawing.Point(3, 99);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(263, 28);
@@ -450,7 +487,7 @@ namespace SignalGenerator
             "Square Wave",
             "Triangle Wave",
             "Noise",
-            "PulseWithDifferentDutyCycle"});
+            "PULSEWITHDIFFERENTDUTYCYCLE"});
             this.comboBox3.Location = new System.Drawing.Point(3, 195);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(263, 28);
@@ -465,7 +502,7 @@ namespace SignalGenerator
             "Square Wave",
             "Triangle Wave",
             "Noise",
-            "PulseWithDifferentDutyCycle"});
+            "PULSEWITHDIFFERENTDUTYCYCLE"});
             this.comboBox4.Location = new System.Drawing.Point(3, 306);
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(263, 28);
@@ -480,7 +517,7 @@ namespace SignalGenerator
             "Square Wave",
             "Triangle Wave",
             "Noise",
-            "PulseWithDifferentDutyCycle"});
+            "PULSEWITHDIFFERENTDUTYCYCLE"});
             this.comboBox5.Location = new System.Drawing.Point(3, 417);
             this.comboBox5.Name = "comboBox5";
             this.comboBox5.Size = new System.Drawing.Size(263, 28);
@@ -499,7 +536,7 @@ namespace SignalGenerator
             this.flowLayoutPanel1.Controls.Add(this.label27);
             this.flowLayoutPanel1.Controls.Add(this.t1);
             this.flowLayoutPanel1.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(310, 3);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(311, 3);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(631, 90);
             this.flowLayoutPanel1.TabIndex = 9;
@@ -598,7 +635,7 @@ namespace SignalGenerator
             this.flowLayoutPanel4.Controls.Add(this.label28);
             this.flowLayoutPanel4.Controls.Add(this.t2);
             this.flowLayoutPanel4.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.flowLayoutPanel4.Location = new System.Drawing.Point(310, 99);
+            this.flowLayoutPanel4.Location = new System.Drawing.Point(311, 99);
             this.flowLayoutPanel4.Name = "flowLayoutPanel4";
             this.flowLayoutPanel4.Size = new System.Drawing.Size(631, 90);
             this.flowLayoutPanel4.TabIndex = 10;
@@ -697,7 +734,7 @@ namespace SignalGenerator
             this.flowLayoutPanel5.Controls.Add(this.label31);
             this.flowLayoutPanel5.Controls.Add(this.t5);
             this.flowLayoutPanel5.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.flowLayoutPanel5.Location = new System.Drawing.Point(310, 417);
+            this.flowLayoutPanel5.Location = new System.Drawing.Point(311, 417);
             this.flowLayoutPanel5.Name = "flowLayoutPanel5";
             this.flowLayoutPanel5.Size = new System.Drawing.Size(631, 109);
             this.flowLayoutPanel5.TabIndex = 11;
@@ -796,7 +833,7 @@ namespace SignalGenerator
             this.flowLayoutPanel6.Controls.Add(this.label30);
             this.flowLayoutPanel6.Controls.Add(this.t3);
             this.flowLayoutPanel6.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.flowLayoutPanel6.Location = new System.Drawing.Point(310, 195);
+            this.flowLayoutPanel6.Location = new System.Drawing.Point(311, 195);
             this.flowLayoutPanel6.Name = "flowLayoutPanel6";
             this.flowLayoutPanel6.Size = new System.Drawing.Size(631, 98);
             this.flowLayoutPanel6.TabIndex = 12;
@@ -895,7 +932,7 @@ namespace SignalGenerator
             this.flowLayoutPanel7.Controls.Add(this.label29);
             this.flowLayoutPanel7.Controls.Add(this.t4);
             this.flowLayoutPanel7.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.flowLayoutPanel7.Location = new System.Drawing.Point(310, 306);
+            this.flowLayoutPanel7.Location = new System.Drawing.Point(311, 306);
             this.flowLayoutPanel7.Name = "flowLayoutPanel7";
             this.flowLayoutPanel7.Size = new System.Drawing.Size(631, 93);
             this.flowLayoutPanel7.TabIndex = 13;
@@ -981,6 +1018,333 @@ namespace SignalGenerator
             this.t4.Size = new System.Drawing.Size(100, 30);
             this.t4.TabIndex = 13;
             // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.button3);
+            this.tabPage3.Controls.Add(this.button4);
+            this.tabPage3.Controls.Add(this.flowLayoutPanel10);
+            this.tabPage3.Controls.Add(this.flowLayoutPanel9);
+            this.tabPage3.Controls.Add(this.flowLayoutPanel8);
+            this.tabPage3.Location = new System.Drawing.Point(4, 29);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(1435, 677);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "tabPage3";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.White;
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button3.Location = new System.Drawing.Point(563, 108);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(142, 47);
+            this.button3.TabIndex = 17;
+            this.button3.Text = "Play";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.White;
+            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button4.Location = new System.Drawing.Point(563, 30);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(142, 47);
+            this.button4.TabIndex = 16;
+            this.button4.Text = "Generate Signal Wave";
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // flowLayoutPanel10
+            // 
+            this.flowLayoutPanel10.Controls.Add(this.label38);
+            this.flowLayoutPanel10.Controls.Add(this.ms_type);
+            this.flowLayoutPanel10.Controls.Add(this.label40);
+            this.flowLayoutPanel10.Controls.Add(this.ms_a);
+            this.flowLayoutPanel10.Controls.Add(this.label41);
+            this.flowLayoutPanel10.Controls.Add(this.ms_ph);
+            this.flowLayoutPanel10.Controls.Add(this.label42);
+            this.flowLayoutPanel10.Controls.Add(this.ms_fr);
+            this.flowLayoutPanel10.Controls.Add(this.label43);
+            this.flowLayoutPanel10.Controls.Add(this.ms_dc);
+            this.flowLayoutPanel10.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.flowLayoutPanel10.Location = new System.Drawing.Point(342, 195);
+            this.flowLayoutPanel10.Name = "flowLayoutPanel10";
+            this.flowLayoutPanel10.Size = new System.Drawing.Size(170, 382);
+            this.flowLayoutPanel10.TabIndex = 15;
+            // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label38.Location = new System.Drawing.Point(3, 0);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(158, 23);
+            this.label38.TabIndex = 1;
+            this.label38.Text = "Modulation signal";
+            // 
+            // ms_type
+            // 
+            this.ms_type.FormattingEnabled = true;
+            this.ms_type.Items.AddRange(new object[] {
+            "Harmonic Wave",
+            "Sawtooth Wave",
+            "Square Wave",
+            "Triangle Wave",
+            "Noise",
+            "PULSEWITHDIFFERENTDUTYCYCLE"});
+            this.ms_type.Location = new System.Drawing.Point(3, 26);
+            this.ms_type.Name = "ms_type";
+            this.ms_type.Size = new System.Drawing.Size(158, 31);
+            this.ms_type.TabIndex = 15;
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label40.Location = new System.Drawing.Point(3, 60);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(96, 23);
+            this.label40.TabIndex = 0;
+            this.label40.Text = "Amplitude";
+            // 
+            // ms_a
+            // 
+            this.ms_a.Location = new System.Drawing.Point(3, 86);
+            this.ms_a.Name = "ms_a";
+            this.ms_a.Size = new System.Drawing.Size(100, 30);
+            this.ms_a.TabIndex = 5;
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.Location = new System.Drawing.Point(3, 119);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(60, 23);
+            this.label41.TabIndex = 3;
+            this.label41.Text = "Phase";
+            // 
+            // ms_ph
+            // 
+            this.ms_ph.Location = new System.Drawing.Point(3, 145);
+            this.ms_ph.Name = "ms_ph";
+            this.ms_ph.Size = new System.Drawing.Size(100, 30);
+            this.ms_ph.TabIndex = 6;
+            // 
+            // label42
+            // 
+            this.label42.AutoSize = true;
+            this.label42.Location = new System.Drawing.Point(3, 178);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(98, 23);
+            this.label42.TabIndex = 4;
+            this.label42.Text = "Frequency";
+            // 
+            // ms_fr
+            // 
+            this.ms_fr.Location = new System.Drawing.Point(3, 204);
+            this.ms_fr.Name = "ms_fr";
+            this.ms_fr.Size = new System.Drawing.Size(100, 30);
+            this.ms_fr.TabIndex = 7;
+            // 
+            // label43
+            // 
+            this.label43.AutoSize = true;
+            this.label43.Location = new System.Drawing.Point(3, 237);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(99, 23);
+            this.label43.TabIndex = 10;
+            this.label43.Text = "DutyCycle";
+            // 
+            // ms_dc
+            // 
+            this.ms_dc.Location = new System.Drawing.Point(3, 263);
+            this.ms_dc.Name = "ms_dc";
+            this.ms_dc.Size = new System.Drawing.Size(100, 30);
+            this.ms_dc.TabIndex = 11;
+            // 
+            // flowLayoutPanel9
+            // 
+            this.flowLayoutPanel9.Controls.Add(this.label44);
+            this.flowLayoutPanel9.Controls.Add(this.ComboBox_modulationType);
+            this.flowLayoutPanel9.Controls.Add(this.label37);
+            this.flowLayoutPanel9.Controls.Add(this.textBox_modulationTime);
+            this.flowLayoutPanel9.Controls.Add(this.label39);
+            this.flowLayoutPanel9.Controls.Add(this.textBox_modulationSampling);
+            this.flowLayoutPanel9.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.flowLayoutPanel9.Location = new System.Drawing.Point(82, 30);
+            this.flowLayoutPanel9.Name = "flowLayoutPanel9";
+            this.flowLayoutPanel9.Size = new System.Drawing.Size(430, 125);
+            this.flowLayoutPanel9.TabIndex = 14;
+            // 
+            // label44
+            // 
+            this.label44.AutoSize = true;
+            this.label44.Location = new System.Drawing.Point(3, 0);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(147, 23);
+            this.label44.TabIndex = 16;
+            this.label44.Text = "Modulation type";
+            // 
+            // ComboBox_modulationType
+            // 
+            this.ComboBox_modulationType.FormattingEnabled = true;
+            this.ComboBox_modulationType.Items.AddRange(new object[] {
+            "Amplitude modulation",
+            "Frequency modulation"});
+            this.ComboBox_modulationType.Location = new System.Drawing.Point(156, 3);
+            this.ComboBox_modulationType.Name = "ComboBox_modulationType";
+            this.ComboBox_modulationType.Size = new System.Drawing.Size(263, 31);
+            this.ComboBox_modulationType.TabIndex = 16;
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.Location = new System.Drawing.Point(3, 37);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(53, 23);
+            this.label37.TabIndex = 0;
+            this.label37.Text = "Time";
+            // 
+            // textBox_modulationTime
+            // 
+            this.textBox_modulationTime.Location = new System.Drawing.Point(62, 40);
+            this.textBox_modulationTime.Name = "textBox_modulationTime";
+            this.textBox_modulationTime.Size = new System.Drawing.Size(100, 30);
+            this.textBox_modulationTime.TabIndex = 2;
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.Location = new System.Drawing.Point(168, 37);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(86, 23);
+            this.label39.TabIndex = 1;
+            this.label39.Text = "Sampling";
+            // 
+            // textBox_modulationSampling
+            // 
+            this.textBox_modulationSampling.Location = new System.Drawing.Point(260, 40);
+            this.textBox_modulationSampling.Name = "textBox_modulationSampling";
+            this.textBox_modulationSampling.Size = new System.Drawing.Size(100, 30);
+            this.textBox_modulationSampling.TabIndex = 3;
+            // 
+            // flowLayoutPanel8
+            // 
+            this.flowLayoutPanel8.Controls.Add(this.label32);
+            this.flowLayoutPanel8.Controls.Add(this.cs_type);
+            this.flowLayoutPanel8.Controls.Add(this.label33);
+            this.flowLayoutPanel8.Controls.Add(this.cs_a);
+            this.flowLayoutPanel8.Controls.Add(this.label34);
+            this.flowLayoutPanel8.Controls.Add(this.cs_ph);
+            this.flowLayoutPanel8.Controls.Add(this.label35);
+            this.flowLayoutPanel8.Controls.Add(this.cs_fr);
+            this.flowLayoutPanel8.Controls.Add(this.label36);
+            this.flowLayoutPanel8.Controls.Add(this.cs_dc);
+            this.flowLayoutPanel8.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.flowLayoutPanel8.Location = new System.Drawing.Point(82, 195);
+            this.flowLayoutPanel8.Name = "flowLayoutPanel8";
+            this.flowLayoutPanel8.Size = new System.Drawing.Size(162, 382);
+            this.flowLayoutPanel8.TabIndex = 11;
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label32.Location = new System.Drawing.Point(3, 0);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(126, 23);
+            this.label32.TabIndex = 1;
+            this.label32.Text = "Carrier signal";
+            // 
+            // cs_type
+            // 
+            this.cs_type.FormattingEnabled = true;
+            this.cs_type.Items.AddRange(new object[] {
+            "Harmonic Wave",
+            "Sawtooth Wave",
+            "Square Wave",
+            "Triangle Wave",
+            "Noise",
+            "PULSEWITHDIFFERENTDUTYCYCLE"});
+            this.cs_type.Location = new System.Drawing.Point(3, 26);
+            this.cs_type.Name = "cs_type";
+            this.cs_type.Size = new System.Drawing.Size(147, 31);
+            this.cs_type.TabIndex = 15;
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label33.Location = new System.Drawing.Point(3, 60);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(96, 23);
+            this.label33.TabIndex = 0;
+            this.label33.Text = "Amplitude";
+            // 
+            // cs_a
+            // 
+            this.cs_a.Location = new System.Drawing.Point(3, 86);
+            this.cs_a.Name = "cs_a";
+            this.cs_a.Size = new System.Drawing.Size(100, 30);
+            this.cs_a.TabIndex = 5;
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Location = new System.Drawing.Point(3, 119);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(60, 23);
+            this.label34.TabIndex = 3;
+            this.label34.Text = "Phase";
+            // 
+            // cs_ph
+            // 
+            this.cs_ph.Location = new System.Drawing.Point(3, 145);
+            this.cs_ph.Name = "cs_ph";
+            this.cs_ph.Size = new System.Drawing.Size(100, 30);
+            this.cs_ph.TabIndex = 6;
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Location = new System.Drawing.Point(3, 178);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(98, 23);
+            this.label35.TabIndex = 4;
+            this.label35.Text = "Frequency";
+            // 
+            // cs_fr
+            // 
+            this.cs_fr.Location = new System.Drawing.Point(3, 204);
+            this.cs_fr.Name = "cs_fr";
+            this.cs_fr.Size = new System.Drawing.Size(100, 30);
+            this.cs_fr.TabIndex = 7;
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Location = new System.Drawing.Point(3, 237);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(99, 23);
+            this.label36.TabIndex = 10;
+            this.label36.Text = "DutyCycle";
+            // 
+            // cs_dc
+            // 
+            this.cs_dc.Location = new System.Drawing.Point(3, 263);
+            this.cs_dc.Name = "cs_dc";
+            this.cs_dc.Size = new System.Drawing.Size(100, 30);
+            this.cs_dc.TabIndex = 11;
+            // 
             // SignalWaveVisualizerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -1008,6 +1372,13 @@ namespace SignalGenerator
             this.flowLayoutPanel6.PerformLayout();
             this.flowLayoutPanel7.ResumeLayout(false);
             this.flowLayoutPanel7.PerformLayout();
+            this.tabPage3.ResumeLayout(false);
+            this.flowLayoutPanel10.ResumeLayout(false);
+            this.flowLayoutPanel10.PerformLayout();
+            this.flowLayoutPanel9.ResumeLayout(false);
+            this.flowLayoutPanel9.PerformLayout();
+            this.flowLayoutPanel8.ResumeLayout(false);
+            this.flowLayoutPanel8.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1097,6 +1468,38 @@ namespace SignalGenerator
         private System.Windows.Forms.TextBox t3;
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.TextBox t4;
+        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel10;
+        private System.Windows.Forms.Label label38;
+        private System.Windows.Forms.ComboBox ms_type;
+        private System.Windows.Forms.Label label40;
+        private System.Windows.Forms.TextBox ms_a;
+        private System.Windows.Forms.Label label41;
+        private System.Windows.Forms.TextBox ms_ph;
+        private System.Windows.Forms.Label label42;
+        private System.Windows.Forms.TextBox ms_fr;
+        private System.Windows.Forms.Label label43;
+        private System.Windows.Forms.TextBox ms_dc;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel9;
+        private System.Windows.Forms.Label label44;
+        private System.Windows.Forms.ComboBox ComboBox_modulationType;
+        private System.Windows.Forms.Label label37;
+        private System.Windows.Forms.TextBox textBox_modulationTime;
+        private System.Windows.Forms.Label label39;
+        private System.Windows.Forms.TextBox textBox_modulationSampling;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel8;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.ComboBox cs_type;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.TextBox cs_a;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.TextBox cs_ph;
+        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.TextBox cs_fr;
+        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.TextBox cs_dc;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
     }
 }
 

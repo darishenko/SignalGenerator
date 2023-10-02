@@ -1,13 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
+﻿using System.IO;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace SignalGenerator.Signal.Sound
 {
-    class SoundGenerator
+    internal class SoundGenerator
     {
         public void WriteWaveFile(string filename, double[] data, int sampleRate)
         {
@@ -20,11 +16,11 @@ namespace SignalGenerator.Signal.Sound
                 bwStream.Write(Encoding.ASCII.GetBytes("WAVE"));
                 bwStream.Write(Encoding.ASCII.GetBytes("fmt "));
                 bwStream.Write(16);
-                bwStream.Write((short)1);
+                bwStream.Write((short) 1);
                 bwStream.Write(numChannels);
                 bwStream.Write(sampleRate);
                 bwStream.Write(sampleRate * numChannels * bitsPerSample / 8);
-                bwStream.Write((short)(numChannels * bitsPerSample / 8));
+                bwStream.Write((short) (numChannels * bitsPerSample / 8));
                 bwStream.Write(bitsPerSample);
                 bwStream.Write(Encoding.ASCII.GetBytes("data"));
                 bwStream.Write(data.Length * numChannels * bitsPerSample / 8);
@@ -33,11 +29,9 @@ namespace SignalGenerator.Signal.Sound
                 foreach (var value in data)
                 {
                     result = value * int.MaxValue;
-                    bwStream.Write((int)result);
+                    bwStream.Write((int) result);
                 }
-
             }
-
         }
     }
 }
