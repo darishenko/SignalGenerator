@@ -39,10 +39,17 @@ namespace SignalGenerator
         private void TextBox_TextChanged(object sender, EventArgs e)
         {
             var textBox = sender as TextBox;
-            if (Regex.IsMatch(textBox.Text, "[^0-9]"))
+            if (textBox.Text.Length > 0)
             {
-                MessageBox.Show("Please enter only numbers.");
-                textBox.Text = textBox.Text.Remove(textBox.Text.Length - 1);
+                try
+                {
+                    var d = double.Parse(textBox.Text);
+                }
+                catch
+                {
+                    MessageBox.Show("Please enter only numbers.");
+                    textBox.Text = textBox.Text.Remove(textBox.Text.Length - 1);
+                }
             }
         }
 
