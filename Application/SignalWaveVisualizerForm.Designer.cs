@@ -171,7 +171,7 @@ namespace SignalGenerator
             "Square Wave",
             "Triangle Wave",
             "Noise",
-            "PULSEWITHDIFFERENTDUTYCYCLE"});
+            "Pulse with different duty cycle"});
             this.comboBoxSignalWaveTypes.Location = new System.Drawing.Point(0, 7);
             this.comboBoxSignalWaveTypes.Name = "comboBoxSignalWaveTypes";
             this.comboBoxSignalWaveTypes.Size = new System.Drawing.Size(263, 28);
@@ -208,7 +208,6 @@ namespace SignalGenerator
             this.TextBox_Amplitude.Name = "TextBox_Amplitude";
             this.TextBox_Amplitude.Size = new System.Drawing.Size(100, 30);
             this.TextBox_Amplitude.TabIndex = 5;
-            this.TextBox_Amplitude.TextChanged += new System.EventHandler(this.TextBox_TextChanged);
             // 
             // label2
             // 
@@ -375,7 +374,7 @@ namespace SignalGenerator
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(1435, 677);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "tabPage1";
+            this.tabPage1.Text = "Carrier Signal";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // tabPage2
@@ -388,7 +387,7 @@ namespace SignalGenerator
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(1435, 677);
             this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
+            this.tabPage2.Text = "Polyphonic Signal";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // button2
@@ -457,7 +456,7 @@ namespace SignalGenerator
             "Square Wave",
             "Triangle Wave",
             "Noise",
-            "PULSEWITHDIFFERENTDUTYCYCLE"});
+            "Pulse with different duty cycle"});
             this.comboBox1.Location = new System.Drawing.Point(3, 3);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(263, 28);
@@ -472,7 +471,7 @@ namespace SignalGenerator
             "Square Wave",
             "Triangle Wave",
             "Noise",
-            "PULSEWITHDIFFERENTDUTYCYCLE"});
+            "Pulse with different duty cycle"});
             this.comboBox2.Location = new System.Drawing.Point(3, 99);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(263, 28);
@@ -487,7 +486,7 @@ namespace SignalGenerator
             "Square Wave",
             "Triangle Wave",
             "Noise",
-            "PULSEWITHDIFFERENTDUTYCYCLE"});
+            "Pulse with different duty cycle"});
             this.comboBox3.Location = new System.Drawing.Point(3, 195);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(263, 28);
@@ -502,7 +501,7 @@ namespace SignalGenerator
             "Square Wave",
             "Triangle Wave",
             "Noise",
-            "PULSEWITHDIFFERENTDUTYCYCLE"});
+            "Pulse with different duty cycle"});
             this.comboBox4.Location = new System.Drawing.Point(3, 306);
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(263, 28);
@@ -517,7 +516,7 @@ namespace SignalGenerator
             "Square Wave",
             "Triangle Wave",
             "Noise",
-            "PULSEWITHDIFFERENTDUTYCYCLE"});
+            "Pulse with different duty cycle"});
             this.comboBox5.Location = new System.Drawing.Point(3, 417);
             this.comboBox5.Name = "comboBox5";
             this.comboBox5.Size = new System.Drawing.Size(263, 28);
@@ -1030,7 +1029,7 @@ namespace SignalGenerator
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage3.Size = new System.Drawing.Size(1435, 677);
             this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "tabPage3";
+            this.tabPage3.Text = "Signal Modulation";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // button3
@@ -1100,7 +1099,7 @@ namespace SignalGenerator
             "Square Wave",
             "Triangle Wave",
             "Noise",
-            "PULSEWITHDIFFERENTDUTYCYCLE"});
+            "Pulse with different duty cycle"});
             this.ms_type.Location = new System.Drawing.Point(3, 26);
             this.ms_type.Name = "ms_type";
             this.ms_type.Size = new System.Drawing.Size(158, 31);
@@ -1274,7 +1273,7 @@ namespace SignalGenerator
             "Square Wave",
             "Triangle Wave",
             "Noise",
-            "PULSEWITHDIFFERENTDUTYCYCLE"});
+            "Pulse with different duty cycle"});
             this.cs_type.Location = new System.Drawing.Point(3, 26);
             this.cs_type.Name = "cs_type";
             this.cs_type.Size = new System.Drawing.Size(147, 31);

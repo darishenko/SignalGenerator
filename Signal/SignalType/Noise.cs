@@ -39,5 +39,10 @@ namespace SignalGenerator.Signal.SignalWave
             Values = signalWaveDots;
             return Values;
         }
+
+        public double[] FrequencyModulation(ISignalWave modulationSignal, int sampling)
+        {
+            return Values;
+        }
     }
 }

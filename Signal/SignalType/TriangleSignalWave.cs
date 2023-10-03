@@ -29,5 +29,16 @@ namespace SignalGenerator.Signal.SignalType
             Values = signalWaveDots;
             return Values;
         }
+
+        public double[] FrequencyModulation(ISignalWave modulationSignal, int sampling)
+        {
+            double sum = 0;
+            for (int i = 0; i < Values.Length; i++)
+            {
+                sum += 2 * Math.PI * Frequency * (1 + modulationSignal.Values[i]) / sampling;
+                Values[i] = 2 * Amplitude * Math.Asin(Math.Sin(sum + Phase)) / Math.PI;
+            }
+            return Values;
+        }
     }
 }

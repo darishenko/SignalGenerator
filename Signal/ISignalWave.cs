@@ -8,5 +8,6 @@
 
         double[] Values { get; set; }
         double[] GenerateSignalWaveDots(int time, int sampling);
+        double[] FrequencyModulation(ISignalWave modulationSignal, int sampling);
     }
 }

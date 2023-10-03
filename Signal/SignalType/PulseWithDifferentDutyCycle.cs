@@ -34,5 +34,24 @@
             Values = signalWaveDots;
             return Values;
         }
+
+        public double[] FrequencyModulation(ISignalWave modulationSignal, int sampling)
+        {
+            var signalWaveDots = new double[Values.Length];
+            var T = 1 / Frequency;
+            double sum = 0;
+            for (var i = 0; i < Values.Length; i++)
+            {
+                sum += (1 + modulationSignal.Values[i]) / sampling;
+                var d = sum % T / T;
+                if (d < 1 / DutyCycle)
+                    signalWaveDots[i] = Amplitude;
+                else
+                    signalWaveDots[i] = -Amplitude;
+            }
+
+            Values = signalWaveDots;
+            return Values;
+        }
     }
 }

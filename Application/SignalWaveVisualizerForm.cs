@@ -21,6 +21,7 @@ namespace SignalGenerator
         private int _sampling;
         private ISignalWave _selectedSignalWave;
         private double[] _signalWavePoints;
+        private int _time = 1;
         private double M = 1;
 
         public SignalWaveVisualizerForm()
@@ -103,8 +104,8 @@ namespace SignalGenerator
             var signalWave = new LineSeries
             {
                 Color = OxyColor.FromRgb(47, 94, 94),
-                StrokeThickness = 2,
-                MarkerSize = 3,
+                StrokeThickness = 0.1,
+                MarkerSize = 0.9,
                 MarkerType = MarkerType.Circle
             };
 
@@ -138,23 +139,23 @@ namespace SignalGenerator
                 switch (i)
                 {
                     case 1:
-                        tempWave = getSignalWaveForPolyphonicSignal(comboBox1, a1, ph1, fr1, dc1, t1, null);
+                        tempWave = GetSignalWaveForPolyphonicSignal(comboBox1, a1, ph1, fr1, dc1, t1, null);
                         if (tempWave != null) waves.Add(tempWave);
                         break;
                     case 2:
-                        tempWave = getSignalWaveForPolyphonicSignal(comboBox2, a2, ph2, fr2, dc2, t2, null);
+                        tempWave = GetSignalWaveForPolyphonicSignal(comboBox2, a2, ph2, fr2, dc2, t2, null);
                         if (tempWave != null) waves.Add(tempWave);
                         break;
                     case 3:
-                        tempWave = getSignalWaveForPolyphonicSignal(comboBox3, a3, ph3, fr3, dc3, t3, null);
+                        tempWave = GetSignalWaveForPolyphonicSignal(comboBox3, a3, ph3, fr3, dc3, t3, null);
                         if (tempWave != null) waves.Add(tempWave);
                         break;
                     case 4:
-                        tempWave = getSignalWaveForPolyphonicSignal(comboBox4, a4, ph4, fr4, dc4, t4, null);
+                        tempWave = GetSignalWaveForPolyphonicSignal(comboBox4, a4, ph4, fr4, dc4, t4, null);
                         if (tempWave != null) waves.Add(tempWave);
                         break;
                     case 5:
-                        tempWave = getSignalWaveForPolyphonicSignal(comboBox5, a5, ph5, fr5, dc5, t5, null);
+                        tempWave = GetSignalWaveForPolyphonicSignal(comboBox5, a5, ph5, fr5, dc5, t5, null);
                         if (tempWave != null) waves.Add(tempWave);
                         break;
                 }
@@ -176,7 +177,7 @@ namespace SignalGenerator
             return result;
         }
 
-        private ISignalWave getSignalWaveForPolyphonicSignal(
+        private ISignalWave GetSignalWaveForPolyphonicSignal(
             ComboBox comboBox,
             TextBox textBoxAmplitude,
             TextBox textBoxPhase,
@@ -224,9 +225,9 @@ namespace SignalGenerator
                     break;
             }
 
-            var time = int.Parse(textBoxTime.Text);
+             _time = int.Parse(textBoxTime.Text);
             _sampling = textBoxSampling == null ? 44100 : int.Parse(textBoxSampling.Text);
-            _signalWavePoints = signalWave.GenerateSignalWaveDots(time, _sampling);
+            _signalWavePoints = signalWave.GenerateSignalWaveDots(_time, _sampling);
 
             return signalWave;
         }
@@ -238,8 +239,8 @@ namespace SignalGenerator
 
         private void button4_Click(object sender, EventArgs e)
         {
-            ISignalWave carrierWave = getSignalWaveForPolyphonicSignal(cs_type, cs_a, cs_ph, cs_fr, cs_dc, textBox_modulationTime, textBox_modulationSampling);
-            ISignalWave modulationWave = getSignalWaveForPolyphonicSignal(ms_type, ms_a, ms_ph, ms_fr, ms_dc, textBox_modulationTime, textBox_modulationSampling);
+            ISignalWave carrierWave = GetSignalWaveForPolyphonicSignal(cs_type, cs_a, cs_ph, cs_fr, cs_dc, textBox_modulationTime, textBox_modulationSampling);
+            ISignalWave modulationWave = GetSignalWaveForPolyphonicSignal(ms_type, ms_a, ms_ph, ms_fr, ms_dc, textBox_modulationTime, textBox_modulationSampling);
            
             var modulationType = (ModulationType) ComboBox_modulationType.SelectedIndex;
             if (modulationType == ModulationType.AMPLITIDE)
@@ -248,7 +249,7 @@ namespace SignalGenerator
             }
             else
             {
-                
+                _signalWavePoints = carrierWave.FrequencyModulation(modulationWave, _sampling);
             }
             DrawSignalWave(_signalWavePoints);
         }

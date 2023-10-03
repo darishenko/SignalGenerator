@@ -23,10 +23,21 @@ namespace SignalGenerator.Signal.SignalType
             var signalWaveDots = new double[steps + 1];
 
             for (var i = 0; i < steps + 1; i++)
-                signalWaveDots[i] = 2 * Amplitude / Math.PI *
+                signalWaveDots[i] = - 2 * Amplitude / Math.PI *
                                     Math.Atan(Math.Tan(Math.PI * Frequency * i * samplingStep + Phase));
 
             Values = signalWaveDots;
+            return Values;
+        }
+
+        public double[] FrequencyModulation(ISignalWave modulationSignal, int sampling)
+        {
+            double sum = 0;
+            for (int i = 0; i < Values.Length; i++)
+            {
+                sum += Math.PI * Frequency * (1 + modulationSignal.Values[i]) / sampling;
+                Values[i] = - 2 * Amplitude / Math.PI * Math.Atan(Math.Tan(sum + Phase));
+            }
             return Values;
         }
     }
