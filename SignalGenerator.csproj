@@ -79,6 +79,7 @@
             <DependentUpon>SignalWaveVisualizerForm.cs</DependentUpon>
         </Compile>
         <Compile Include="Application\Program.cs" />
+        <Compile Include="FourierTransform\FourierTransformer.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
         <Compile Include="Signal\ISignalWave.cs" />
         <Compile Include="Signal\ModulationType.cs" />
@@ -89,8 +90,9 @@
         <Compile Include="Signal\SignalType\SawtoothSignalWave.cs" />
         <Compile Include="Signal\SignalType\SquareSignalWave.cs" />
         <Compile Include="Signal\SignalType\TriangleSignalWave.cs" />
-        <Compile Include="Signal\Sound\SoundFormat.cs" />
-        <Compile Include="Signal\Sound\SoundGenerator.cs" />
+        <Compile Include="Sound\SoundFormat.cs" />
+        <Compile Include="Sound\SoundGenerator.cs" />
+        <Compile Include="Spectrum\SpectrumComputer.cs" />
         <EmbeddedResource Include="Application\SignalWaveVisualizerForm.resx">
             <DependentUpon>SignalWaveVisualizerForm.cs</DependentUpon>
         </EmbeddedResource>

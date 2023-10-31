@@ -1,7 +1,7 @@
 ﻿using System.IO;
 using System.Text;
 
-namespace SignalGenerator.Signal.Sound
+namespace SignalGenerator.Sound
 {
     internal class SoundGenerator
     {

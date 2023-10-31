@@ -1,4 +1,4 @@
-﻿namespace SignalGenerator.Signal.Sound
+﻿namespace SignalGenerator.Sound
 {
     internal class SoundFormat
     {
