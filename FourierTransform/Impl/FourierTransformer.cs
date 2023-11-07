@@ -1,39 +1,39 @@
 ﻿using System;
+using System.Numerics;
 
-namespace SignalGenerator.FourierTransform
+namespace SignalGenerator.FourierTransform.Impl
 {
-    public class FourierTransformer
+    public class FourierTransformer : IFourierTransformer
     {
-        public static Complex[] DiscreteFourierTransform(double[] signalValues)
+        public Complex[] DiscreteFourierTransform(double[] signalValues)
         {
             var N = signalValues.Length;
-            Complex[] spectrum = new Complex[N];
+            var spectrum = new Complex[N];
             for (var k = 0; k < N; k++)
             {
-                spectrum[k] = 0;
+                spectrum[k] = Complex.Zero;
                 var angle = 2 * Math.PI * k / N;
                 for (var n = 0; n < N; n++)
                 {
-                    Complex complex = new Complex(Math.Cos(angle * n), -Math.Sin(angle * n));
-                    spectrum[k] += signalValues[k] * complex;
+                    var complex = new Complex(Math.Cos(angle * n), -Math.Sin(angle * n));
+                    spectrum[k] += signalValues[n] * complex;
                 }
             }
 
             return spectrum;
         }
 
-        public static double[] InverseDiscreteFourierTransform(Complex[] spectrum)
+        public double[] InverseDiscreteFourierTransform(Complex[] spectrum)
         {
             var N = spectrum.Length;
             var result = new double[N];
             for (var n = 0; n < N; n++)
             {
-                Complex sum = 0;
+                var sum = Complex.Zero;
                 var angle = 2 * Math.PI * n / N;
                 for (var k = 0; k < N; k++)
                 {
-                    Complex complex = Complex.FromPolarCoordinates(1, angle * k); //комплексное умножение
-                    //Complex complex = new Complex(Math.Cos(angle * k), Math.Sin(angle * k));
+                    var complex = Complex.FromPolarCoordinates(1, angle * k);
                     sum += spectrum[k] * complex;
                 }
 
